@@ -93,7 +93,7 @@ class GameScene: SKScene {
             sprite.alpha = 0
             
             let moveAction = SKAction.moveTo(pointForColumn(block.column, row: block.row),
-                                             duration: NSTimeInterval(0.2))
+                                             duration: 0.2)
             moveAction.timingMode = .EaseOut
             let fadeInAction = SKAction.fadeAlphaTo(0.7, duration: 0.4)
             fadeInAction.timingMode = .EaseOut
@@ -106,14 +106,13 @@ class GameScene: SKScene {
     func movePreviewShape(shape: Shape, completion: () -> ()) {
         for (idx, block) in enumerate(shape.blocks) {
             let sprite = block.sprite!
-            let moveTo = pointForColumn(block.column, row: block.row)
-            let moveToAction: SKAction = SKAction.moveTo(moveTo, duration: 0.2)
+            let moveTo = pointForColumn(block.column, row:block.row)
+            let moveToAction = SKAction.moveTo(moveTo, duration: 0.2)
             moveToAction.timingMode = .EaseOut
-            sprite.runAction(
-                SKAction.group([moveToAction, SKAction.fadeAlphaTo(1.0, duration: 0.2)]),
-                completion: nil)
+            let fadeInAction = SKAction.fadeAlphaTo(1.0, duration: 0.2)
+            fadeInAction.timingMode = .EaseOut
+            sprite.runAction(SKAction.group([moveToAction, fadeInAction]))
         }
-
         runAction(SKAction.waitForDuration(0.2), completion: completion)
     }
 
