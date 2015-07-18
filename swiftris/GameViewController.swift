@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 
-class GameViewController: UIViewController, SwiftrisDelegate {
+class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognizerDelegate {
     var scene: GameScene!
     var swiftris: Swiftris!
     
@@ -19,6 +19,8 @@ class GameViewController: UIViewController, SwiftrisDelegate {
         
         let skView = view as! SKView
         skView.multipleTouchEnabled = false
+        skView.showsFPS = true
+        skView.showsNodeCount = true
         
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
@@ -28,9 +30,13 @@ class GameViewController: UIViewController, SwiftrisDelegate {
         swiftris = Swiftris()
         swiftris.delegate = self
         swiftris.beginGame()
-        
+
         skView.presentScene(scene)
 
+    }
+
+    @IBAction func didTap(sender: UITapGestureRecognizer) {
+        swiftris.rotateShape()
     }
 
     func didTick() {

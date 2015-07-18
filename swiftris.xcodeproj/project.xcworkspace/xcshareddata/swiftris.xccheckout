@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E2795435-E4E6-429F-A630-5B605EEE4F42</string>
+	<key>IDESourceControlProjectName</key>
+	<string>swiftris</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7788824946797CE96C744AE7DA3487530A8E7386</key>
+		<string>github.com:dplummer/swiftris.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>swiftris.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7788824946797CE96C744AE7DA3487530A8E7386</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:dplummer/swiftris.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7788824946797CE96C744AE7DA3487530A8E7386</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7788824946797CE96C744AE7DA3487530A8E7386</string>
+			<key>IDESourceControlWCCName</key>
+			<string>swiftris</string>
+		</dict>
+	</array>
+</dict>
+</plist>

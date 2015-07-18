@@ -22,11 +22,7 @@ class GameScene: SKScene {
     var lastTick:NSDate?
     
     var textureCache = Dictionary<String, SKTexture>()
-    
-    required init(coder aDecoder: NSCoder) {
-        fatalError("NSCoder not supported")
-    }
-    
+
     override init(size: CGSize) {
         super.init(size: size)
         
@@ -49,10 +45,14 @@ class GameScene: SKScene {
         shapeLayer.addChild(gameBoard)
         gameLayer.addChild(shapeLayer)
     }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("NSCoder not supported")
+    }
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-        
+
         if lastTick == nil {
             return
         }
