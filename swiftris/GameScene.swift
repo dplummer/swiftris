@@ -73,7 +73,7 @@ class GameScene: SKScene {
     
     func pointForColumn(column: Int, row: Int) -> CGPoint {
         let x: CGFloat = LayerPosition.x + (CGFloat(column) * BlockSize) + (BlockSize / 2)
-        let y: CGFloat = LayerPosition.y + (CGFloat(row) * BlockSize) + (BlockSize / 2)
+        let y: CGFloat = LayerPosition.y - (CGFloat(row) * BlockSize) + (BlockSize / 2)
         return CGPointMake(x, y)
     }
     
